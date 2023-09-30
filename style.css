@@ -17,8 +17,12 @@ body {
     padding: 50px;
 }
 
-.vis-container {
+.vis1-container {
     width: 50%;
+}
+
+.vis2-container {
+    height: 50%;
 }
 
 .description h2,
