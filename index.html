@@ -85,19 +85,11 @@
     </div>
     <!-- end pure grid group -->
 
-    <div class="pure-g">
-      <div class="pure-u-1-1 small-font">
-        <p>This visualisation is created by <a href="https://fit3179.github.io/Vega-Lite/" target="_blank">FIT3179
-            Teaching Team</a>. The datasource is <a href="#" target=" _blank">some data repository online</href>.</p>
-      </div>
-    </div>
-
-
   </div> <!-- end page -->
 
   <script type="text/javascript">
-    var specVis1 = "./choropleth-map.html";
-    var specVis2 = "./bubble-plot.html";
+    var specVis1 = "idioms/choropleth-map.json";
+    var specVis2 = "idioms/bubble-plot.json";
 
     vegaEmbed('#vis1', specVis1, { "actions": false }).then(function (result) {
       // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
