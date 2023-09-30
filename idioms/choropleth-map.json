@@ -1,0 +1,70 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "background": "#e8f8fa",
+  "layer": [
+    {
+      "width": 900,
+      "height": 450,
+      "projection": {"type": "equalEarth"},
+      "data": {
+        "url": "https://raw.githubusercontent.com/Jerry-Susanto/FIT3179-2023S2-A2/main/ne_110m.json",
+        "format": {"type": "topojson", "feature": "ne_110m_admin_0_countries"}
+      },
+      "mark": {
+        "type": "geoshape",
+        "fill": "#dedede",
+        "stroke": "black",
+        "strokeWidth": 0.5
+      }
+    },
+    {
+      "data": {
+        "url": "https://raw.githubusercontent.com/Jerry-Susanto/FIT3179-2023S2-A2/main/ne_110m.json",
+        "format": {"type": "topojson", "feature": "ne_110m_graticules_30"}
+      },
+      "mark": {"type": "geoshape", "fill": null, "stroke": "lightgray"}
+    },
+    {
+      "title": "Subscribers Per Channel of Each Country Based Only on YouTube Channels with 12,000,000+ Subscribers",
+      "projection": {"type": "equalEarth"},
+      "data": {
+        "url": "https://raw.githubusercontent.com/Jerry-Susanto/FIT3179-2023S2-A2/main/ne_110m.json",
+        "format": {"type": "topojson", "feature": "ne_110m_admin_0_countries"}
+      },
+      "transform": [
+        {
+          "lookup": "properties.NAME",
+          "from": {
+            "data": {
+              "url": "https://raw.githubusercontent.com/Jerry-Susanto/FIT3179-2023S2-A2/main/youtube_filtered.csv"
+            },
+            "key": "Country",
+            "fields": ["TotalSubscribersCountry", "NumChannelsCountry"]
+          }
+        },
+        {
+          "calculate": "datum.TotalSubscribersCountry / datum.NumChannelsCountry",
+          "as": "Subscribers / Channel"
+        }
+      ],
+      "mark": {"type": "geoshape", "stroke": "black", "strokeWidth": 0.5},
+      "encoding": {
+        "color": {
+          "field": "Subscribers / Channel",
+          "type": "quantitative",
+          "scale": {"type": "log", "range": ["#ffb1a3", "#b83018", "#282828"]}
+        },
+        "tooltip": [
+          {"field": "properties.NAME", "type": "nominal", "title": "Country:"},
+          {
+            "field": "Subscribers / Channel",
+            "type": "quantitative",
+            "title": "Subscribers / Channel:",
+            "format": ",.0f"
+          }
+        ]
+      }
+    }
+  ],
+  "config": {}
+}
