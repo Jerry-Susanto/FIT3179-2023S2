@@ -7,13 +7,16 @@ h1 {
 }
 
 body {
-    background-color: lightgray;
+    background-color: #e8f8fa;
 }
 
 .page {
-    width: 1500px;
+    width: 1200px;
     background-color: white;
-    margin: 35px;
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    border-style: solid;
 }
 
 .vis1-container {
@@ -22,6 +25,7 @@ body {
 
 .vis2-container {
     height: 50%;
+    margin-bottom: 40px;
 }
 
 .description h2,
@@ -30,7 +34,7 @@ h1 {
 }
 
 .pure-g {
-    margin-bottom: 40px;
+    margin: 40px;
 }
 
 .small-font {
