@@ -11,10 +11,9 @@ body {
 }
 
 .page {
-    width: 850px;
+    width: 1500px;
     background-color: white;
     margin: 35px;
-    padding: 50px;
 }
 
 .vis1-container {
