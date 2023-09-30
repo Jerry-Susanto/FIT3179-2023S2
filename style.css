@@ -13,9 +13,8 @@ body {
 .page {
     width: 850px;
     background-color: white;
-    margin: auto;
+    margin: 35px;
     padding: 50px;
-    padding-top: 35px;
 }
 
 .vis-container {
