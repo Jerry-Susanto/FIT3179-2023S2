@@ -32,23 +32,11 @@
         ],
         "name": "Continent Selection: "
       }
-    },
-    {
-      "name": "uploads_below",
-      "value": 300000,
-      "bind": {
-        "input": "range",
-        "min": 0,
-        "max": 300000,
-        "step": 20000,
-        "name": "Maximum Uploads: "
-      }
     }
   ],
   "transform": [
     {"filter": "datum.Subscribers > 0"},
     {"filter": "datum.Views > 0"},
-    {"filter": "datum.Uploads <= uploads_below"},
     {
       "filter": "continent_selection == null || datum.Continent == continent_selection"
     }
