@@ -52,7 +52,7 @@
         "color": {
           "field": "Subscribers / Channel",
           "type": "quantitative",
-          "scale": {"type": "log", "range": ["#ffb1a3", "#b83018", "#282828"]}
+          "scale": {"range": ["#ffe1de", "#c4463b", "#630c04"], "domain": [10000000, 40000000]}
         },
         "tooltip": [
           {"field": "properties.NAME", "type": "nominal", "title": "Country"},
