@@ -1,8 +1,22 @@
-Category,Youtuber
-Comedy,67
-Education,42
-Entertainment,213
-Gaming,81
-Music,181
-Others,185
-People & Blogs,104
+Category,Youtuber,Condition
+Comedy,67,all
+Education,42,all
+Entertainment,213,all
+Gaming,81,all
+Music,181,all
+Others,185,all
+People & Blogs,104,all
+Comedy,0,top10
+Education,1,top10
+Entertainment,2,top10
+Gaming,1,top10
+Music,2,top10
+Others,3,top10
+People & Blogs,2,top10
+Comedy,4,top100
+Education,8,top100
+Entertainment,20,top100
+Gaming,6,top100
+Music,32,top100
+Others,20,top100
+People & Blogs,10,top100
